@@ -56,7 +56,11 @@ function publishResult(player, ai, result) {
         document.querySelector('[data-summary="who-win"]').textContent = "Remis"
         document.querySelector('[data-summary="who-win"]').style.color = 'black'
     }
+}
 
+function endGame() {
+    document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow = ''
+    game.playerHand = ''
 }
 
 function startGame() {
@@ -65,6 +69,7 @@ function startGame() {
     const gameResult = checkResult(game.playerHand, game.aiHand)
     console.log(gameResult)
     publishResult(game.playerHand, game.aiHand, gameResult)
+    endGame()
 }
 
 hands.forEach(hand => {
