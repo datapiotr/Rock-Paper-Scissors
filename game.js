@@ -20,7 +20,7 @@ function handSelection() {
     hands.forEach(hand => {
         hand.style.boxShadow = ''
     })
-    this.style.boxShadow = '0 0 0 4px yellow'
+    this.style.boxShadow = '0 0 0 4px red'
 }
 
 function aiChoice() {
