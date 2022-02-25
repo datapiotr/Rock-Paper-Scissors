@@ -41,6 +41,22 @@ function publishResult(player, ai, result) {
     document.querySelector('[data-summary="your-choice"]').textContent = player
     document.querySelector('[data-summary="ai-choice"]').textContent = ai
 
+    if (player === 'rock') {
+        document.querySelector('.your-hand').innerHTML = '✊'
+    } else if (player === 'paper') {
+        document.querySelector('.your-hand').innerHTML = '✋'
+    } else if (player === 'scissors') {
+        document.querySelector('.your-hand').innerHTML = '✌'
+    }
+
+    if (ai === 'rock') {
+        document.querySelector('.ai-hand').innerHTML = '✊'
+    } else if (ai === 'paper') {
+        document.querySelector('.ai-hand').innerHTML = '✋'
+    } else if (ai === 'scissors') {
+        document.querySelector('.ai-hand').innerHTML = '✌'
+    }
+
     document.querySelector('p.numbers span').textContent = ++gameSummary.numbers
 
     if (result === 'Win!') {
