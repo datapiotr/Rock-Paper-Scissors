@@ -13,14 +13,14 @@ const game = {
     aiHand: ''
 }
 
-const hands = document.querySelectorAll('.select img')
+const hands = document.querySelectorAll('.choice')
 
 function handSelection() {
     game.playerHand = this.dataset.option
     hands.forEach(hand => {
-        hand.style.boxShadow = ''
+        hand.style.transform = 'scale(1)'
     })
-    this.style.boxShadow = '0 0 0 4px red'
+    this.style.transform = 'scale(1.5)'
 }
 
 function aiChoice() {
@@ -28,7 +28,7 @@ function aiChoice() {
 }
 
 function checkResult(player, ai) {
-    if (player === 'kamień' && ai === 'nożyczki' || player === 'nożyczki' && ai === 'papier' || player === 'papier' && ai === 'kamień') {
+    if (player === 'rock' && ai === 'scissors' || player === 'scissors' && ai === 'paper' || player === 'paper' && ai === 'rock') {
         return 'Win!'
     } else if (player === ai) {
         return 'Draw!'
