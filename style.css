@@ -5,34 +5,18 @@
     font-family: roboto, sans-serif;
 }
 
-h1 {
+body {
+    width: 65%;
+    margin: 0 auto;
     text-align: center;
+}
+
+h1 {
     margin: 20px 0;
 }
 
 h3 {
     margin: 30px 0;
-}
-
-.panel {
-    margin: 20px;
-}
-
-.panel-left,
-.panel-right {
-    /* display: inline-block; */
-    /* width: 48%; */
-    /* overflow: hidden; */
-    /* margin: 40px auto 0; */
-    text-align: center;
-}
-
-.panel-left p {
-    font-size: 20px;
-}
-
-.panel h3 {
-    text-align: center;
 }
 
 h1,
@@ -41,12 +25,11 @@ h3 {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 25px;
 }
 
 .select {
     overflow: hidden;
-    text-align: center;
     margin: 0 auto;
     max-width: 1000px;
 }
@@ -74,6 +57,20 @@ button.start {
 button.start:hover {
     background-color: rgb(20, 20, 20);
     color: white
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+}
+
+.choices div {
+    flex-basis: 30%;
+}
+
+div.your-hand,
+div.ai-hand {
+    font-size: 80px;
 }
 
 span {

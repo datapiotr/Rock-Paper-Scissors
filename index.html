@@ -31,19 +31,26 @@
 
     <button class="start">Let's play!</button>
 
-    <div class="panel-left">
-        <h3>Wyniki gry</h3>
-        <p>Twój wybór: <span data-summary="your-choice"></span></p>
-        <p>Wybór komputera: <span data-summary="ai-choice"></span></p>
-        <h2>Zwycięzca gry: <span data-summary="who-win"></span></h2>
+    <div class="score">
+        <div class="choices">
+            <div class="your-choice">
+                <p>Your choice: <span data-summary="your-choice"></span></p>
+                <div class="your-hand">✊</div>
+            </div>
+            <div class="ai-choice">
+                <p>Computer choice: <span data-summary="ai-choice"></span></p>
+                <div class="ai-hand">✊</div>
+            </div>
+        </div>
+        <h2>Score: <span data-summary="who-win"></span></h2>
     </div>
 
-    <div class="panel-right">
-        <h3>Aktualne wyniki</h3>
-        <p class="numbers">liczba gier: <span>0</span></p>
-        <p class="wins">wygranych: <span>0</span></p>
-        <p class="losses">przegranych: <span>0</span></p>
-        <p class="draws">remisów: <span>0</span></p>
+    <div class="stats">
+        <h3>Stats:</h3>
+        <p class="numbers">games: <span>0</span></p>
+        <p class="wins">wins: <span>0</span></p>
+        <p class="losses">losses: <span>0</span></p>
+        <p class="draws">draws: <span>0</span></p>
     </div>
 
     <script src="game.js"></script>
