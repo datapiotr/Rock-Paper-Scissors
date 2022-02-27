@@ -1,5 +1,3 @@
-// Zobacz gotowy projekt: https://websamuraj.pl/examples/js/projekt7/
-
 const gameSummary = {
     numbers: 0,
     wins: 0,
@@ -62,11 +60,11 @@ function publishResult(player, ai, result) {
     if (result === 'Win!') {
         document.querySelector('p.wins span').textContent = ++gameSummary.wins
         document.querySelector('[data-summary="who-win"]').textContent = "You win"
-        document.querySelector('[data-summary="who-win"]').style.color = 'green'
+        document.querySelector('[data-summary="who-win"]').style.color = 'lightgreen'
     } else if (result === 'Loss!') {
         document.querySelector('p.losses span').textContent = ++gameSummary.losses
         document.querySelector('[data-summary="who-win"]').textContent = "Computer win"
-        document.querySelector('[data-summary="who-win"]').style.color = 'red'
+        document.querySelector('[data-summary="who-win"]').style.color = 'orangered'
     } else {
         document.querySelector('p.draws span').textContent = ++gameSummary.draws
         document.querySelector('[data-summary="who-win"]').textContent = "Draw"
@@ -83,7 +81,6 @@ function startGame() {
     if (!game.playerHand) return alert('check a hand!')
     game.aiHand = aiChoice()
     const gameResult = checkResult(game.playerHand, game.aiHand)
-    console.log(gameResult)
     publishResult(game.playerHand, game.aiHand, gameResult)
     endGame()
 }

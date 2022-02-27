@@ -7,16 +7,14 @@
 
 body {
     width: 65%;
+    height: 100vh;
     margin: 0 auto;
     text-align: center;
-}
-
-h1 {
-    margin: 20px 0;
-}
-
-h3 {
-    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #6357ad;
+    color: white;
 }
 
 h1,
@@ -25,23 +23,16 @@ h3 {
 }
 
 h2 {
-    font-size: 25px;
-}
-
-.select {
-    overflow: hidden;
-    margin: 0 auto;
-    max-width: 1000px;
+    font-size: 1.6rem;
+    margin-bottom: 3%;
 }
 
 button {
     padding: 5px 20px;
-    text-transform: uppercase;
     background-color: transparent;
-    font-weight: bold;
-    margin: 10px auto;
+    margin: 1% auto;
     transition: .3s;
-    font-size: 30px;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -50,8 +41,9 @@ button.choice {
 }
 
 button.start {
-    display: block;
-    border: 3px solid black
+    border: 3px solid black;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 button.start:hover {
@@ -62,17 +54,22 @@ button.start:hover {
 .choices {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 5%;
 }
 
 .choices div {
-    flex-basis: 30%;
+    flex-basis: 45%;
 }
 
 div.your-hand,
 div.ai-hand {
-    font-size: 80px;
+    font-size: 5rem;
 }
 
 span {
     font-weight: bold;
+}
+
+.stats h3 {
+    margin-bottom: 2%
 }
